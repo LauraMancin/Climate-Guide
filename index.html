@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/weather-icon.png" type="image/x-icon">
+    <title>Climate Guide</title>
+</head>
+<body>
+    <main>
+        <section class="tituloPrincipal">
+            <h1>Bem-vindo ao Climate Guide</h1>
+
+            <p>Digite o local que deseja ver o clima</p>
+        </section>
+
+        <section class="selecao">
+            <div class="opcoes">
+                <p>Escolha o País</p>
+                <input type="text" name="Pais" id="pais">
+            </div>
+
+            <div class="opcoes"
+                <p>Escolha o Estado</p>
+                <input type="text" name="Estado" id="estado">
+            </div>
+
+            <div class="opcoes">
+                <p>Escolha a Cidade</p>
+                <input type="text" name="Cidade" id="cidade">
+            </div>
+
+            <div class="botaoBuscar" id="botaoBuscar">
+                <button>Buscar</button>
+            </div>
+
+            <section class="resultado">
+    
+                <h2 id="nomeCidade">
+                    Cidade
+                </h2>
+    
+                <p class="temperatura">
+                    <span id="temperatura">--</span> °C
+                </p>
+    
+                <p>
+                    Clima:
+                    <span id="descricao">--</span>
+                </p>
+    
+                <p>
+                    Sensação térmica:
+                    <span id="sensacao">--</span> °C
+                </p>
+    
+                <p>
+                    Umidade:
+                    <span id="umidade">--</span>%
+                </p>
+    
+                <p>
+                    Vento:
+                    <span id="vento">--</span> km/h
+                </p>
+    
+            </section>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

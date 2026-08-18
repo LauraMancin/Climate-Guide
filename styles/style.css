@@ -1,0 +1,82 @@
+:root{
+    --rain: #191970;
+    --cloudy: #B0C4DE;
+    --sun:	#FFE4B5;
+    --cold: #E0FFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    background-color: #F8F8FF;
+}
+
+.tituloPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.tituloPrincipal h1{
+    font-size: 35px;
+    font-family:'Lucida Sans', sans-serif;
+}
+.tituloPrincipal p{
+    font-size: 15px;
+    font-family:'Lucida Sans', sans-serif;
+    color: #cccccc;
+}
+
+.selecao{
+    display: flex;
+    flex-direction:row;
+    gap: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', sans-serif;
+    font-weight: 600;
+    background-color: #B0C4DE;
+    border-radius: 10px;
+    padding: 300px;
+    margin: 100px 100px 100px 100px;
+}
+
+.selecao input{
+    padding: 15px;
+    border-radius: 8px;
+    border-color: rgb(36, 20, 255);
+}
+
+.selecao button{
+    padding: 15px;
+    border-radius: 8px;
+    border-color: rgb(36, 20, 255);
+    background-color: #f8ffff;
+}
+
+.resultado {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resultado h2 {
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    margin: 10px 0;
+    background-color: ;
+}
+
+.temperatura {
+    font-size: 40px;
+    font-weight: bold;
+}
