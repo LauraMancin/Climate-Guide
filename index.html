@@ -15,24 +15,15 @@
             <p>Digite o local que deseja ver o clima</p>
         </section>
 
-        <section class="selecao">
-            <div class="opcoes">
-                <p>Escolha o País</p>
-                <input type="text" name="Pais" id="pais">
-            </div>
+        <section class="selecao" id="selecao">
+            <div class="escolha">
+                <div class="opcoes">
+                    <p>Escolha o Local</p>
+                    <input type="text" name="Cidade" id="cidade">
+                </div>
 
-            <div class="opcoes"
-                <p>Escolha o Estado</p>
-                <input type="text" name="Estado" id="estado">
-            </div>
-
-            <div class="opcoes">
-                <p>Escolha a Cidade</p>
-                <input type="text" name="Cidade" id="cidade">
-            </div>
-
-            <div class="botaoBuscar" id="botaoBuscar">
-                <button>Buscar</button>
+                <button class="botaoBuscar" id="botaoBuscar">Buscar</button>
+                
             </div>
 
             <section class="resultado">
@@ -51,16 +42,19 @@
                 </p>
     
                 <p>
+                    <img src="./images/dry.png">
                     Sensação térmica:
                     <span id="sensacao">--</span> °C
                 </p>
     
                 <p>
+                    <img src="./images/wet.png">
                     Umidade:
                     <span id="umidade">--</span>%
                 </p>
     
                 <p>
+                    <img src="./images/wind.png">
                     Vento:
                     <span id="vento">--</span> km/h
                 </p>

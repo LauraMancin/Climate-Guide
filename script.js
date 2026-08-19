@@ -1,24 +1,14 @@
-const botaoBuscar = document.getElementById("buscar");
+const botaoBuscar = document.getElementById("botaoBuscar");
+
+const body = document.body.style
+
+const selecao = document.querySelector('.selecao')
 
 botaoBuscar.addEventListener("click", buscarClima);
 
 function buscarClima() {
-
-    const pais = document.getElementById("pais").value.trim();
-
-    const estado = document.getElementById("estado").value.trim();
-
-    const cidade = document.getElementById("cidade").value.trim();
-
-    if (pais === "") {
-        alert("Digite o nome de um pais")
-        return;
-    }
     
-    if (estado === "") {
-        alert("Digite o nome de um estado")
-        return;
-    }
+    const cidade = document.getElementById("cidade").value.trim();
 
     if (cidade === "") {
         alert("Digite o nome de uma cidade.");
@@ -51,7 +41,7 @@ function buscarClima() {
             document.getElementById("temperatura").textContent =
                 dados.main.temp.toFixed(1);
 
-            document.getElementById("descricao").textContent =
+            let descricao = document.getElementById("descricao").textContent =
                 dados.weather[0].description;
 
             document.getElementById("sensacao").textContent =
@@ -64,6 +54,19 @@ function buscarClima() {
 
             document.getElementById("vento").textContent =
                 ventoKmH.toFixed(1);
+
+            if(descricao === 'céu limpo' || descricao === 'nuvens dispersas'){
+                body.backgroundImage = 'url(images/sunny-bg.jpg)'
+                selecao.style.backgroundColor = '#FFE4B5'
+            }
+            else if(descricao === 'nublado' || descricao === 'algumas nuvens'){
+                body.backgroundImage = 'url(images/cloudy-bg.jpg)'
+                selecao.style.backgroundColor = '#B0C4DE'
+            }
+            else if(descricao === 'chuva' || descricao === 'chuva leve' || descricao === 'chuva forte'){
+                body.backgroundImage = 'url(images/rain-bg.jpg)'
+                selecao.style.backgroundColor = '#194d70'
+            }
         })
 
         .catch(function(erro) {
