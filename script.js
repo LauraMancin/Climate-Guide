@@ -40,9 +40,30 @@ function buscarClima() {
 
             document.getElementById("temperatura").textContent =
                 dados.main.temp.toFixed(1);
-
-            let descricao = document.getElementById("descricao").textContent =
+                
+                let descricao = document.getElementById("descricao").textContent =
                 dados.weather[0].description;
+                
+                // mudança do fundo conforme o clima(descrição)
+                if(descricao === 'céu limpo' || descricao === 'nuvens dispersas'){
+                    body.backgroundImage = 'url(images/sunny-bg.jpg)'
+                    selecao.style.backgroundColor = '#ffe4b57c'
+                }
+
+                else if(descricao === 'nublado' || descricao === 'algumas nuvens'){
+                    body.backgroundImage = 'url(images/cloudy-bg.jpg)'
+                    selecao.style.backgroundColor = '#b0c4de70'
+                }
+
+                else if(descricao === 'chuva' || descricao === 'chuva leve' || descricao === 'chuva forte'){
+                    body.backgroundImage = 'url(images/rain-bg.jpg)'
+                    selecao.style.backgroundColor = '#194d7079'
+                }
+                else if(descricao === 'neve' || descricao === 'neve leve' || descricao === 'nevasca'){
+                    body.backgroundImage = 'url(images/images/cold-bg.jpg)'
+                    selecao.style.backgroundColor = '#e0ffff79'
+                }
+
 
             document.getElementById("sensacao").textContent =
                 dados.main.feels_like.toFixed(1);
@@ -55,18 +76,9 @@ function buscarClima() {
             document.getElementById("vento").textContent =
                 ventoKmH.toFixed(1);
 
-            if(descricao === 'céu limpo' || descricao === 'nuvens dispersas'){
-                body.backgroundImage = 'url(images/sunny-bg.jpg)'
-                selecao.style.backgroundColor = '#FFE4B5'
-            }
-            else if(descricao === 'nublado' || descricao === 'algumas nuvens'){
-                body.backgroundImage = 'url(images/cloudy-bg.jpg)'
-                selecao.style.backgroundColor = '#B0C4DE'
-            }
-            else if(descricao === 'chuva' || descricao === 'chuva leve' || descricao === 'chuva forte'){
-                body.backgroundImage = 'url(images/rain-bg.jpg)'
-                selecao.style.backgroundColor = '#194d70'
-            }
+            document.getElementById("nascerSol").textContent =
+                new Date(dados.data.sunrise * 1000).toLocaleTimeString("pt-BR");
+
         })
 
         .catch(function(erro) {

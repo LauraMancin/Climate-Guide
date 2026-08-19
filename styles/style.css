@@ -17,6 +17,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #f8f8f8;
+    background-image: url(../images/climate-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -49,8 +50,9 @@ body{
     gap: 30px;
     font-size: 20px;
     font-family:'Segoe UI', sans-serif;
+    color: #242121;
     font-weight: 600;
-    background-color: #a6e4d6;
+    background-color: #9b9b9ba6;
     border-radius: 10px;
     padding: 20px;
     margin: 50px 50px 50px 50px;
@@ -86,7 +88,7 @@ body{
 
 .selecao button:hover{
     background-color: #ebebeb;
-    
+    cursor: pointer;
 }
 
 .resultado {
@@ -107,10 +109,17 @@ body{
 
 .resultado p {
     margin: 10px 0;
-    
 }
 
 .temperatura {
     font-size: 40px;
     font-weight: bold;
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    line-height: 1.5;
+    gap: 25px;
 }
