@@ -36,6 +36,8 @@ Sem validação/sanitização robusta de entrada: o campo de busca de cidade nã
 
 Próximo passo natural para produção: mover as chamadas de API para um back-end simples que armazene a chave em variável de ambiente e atue como proxy entre o front-end e a OpenWeather.
 
+💡 Próximos Passos:
+O planejamento futuro desse site é adicionar um gráfico que mostre a temperatura e a chuva ao longo do dia.
 
 👩‍💻 Autora
 
