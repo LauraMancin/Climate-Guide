@@ -26,6 +26,7 @@ function buscarClima() {
         return;
     }
 
+
     const chaveApi = "87a66878258138027af2a3fc1ad0fdf6";
 
     const url =
@@ -119,10 +120,10 @@ function buscarClima() {
             // Quantidade de chuva
             if (dados.rain && dados.rain['1h']) {
                 document.getElementById("chuva").textContent =
-                    dados.rain['1h'] + "(última hora)";
+                    dados.rain['1h'] + "mm (na última hora)";
             } else {
                 document.getElementById("chuva").textContent =
-                    "Sem previsão de chuva ";
+                    "Sem previsão de chuva";
             }
 
             //api open-meteo para pegar a fase da lua
