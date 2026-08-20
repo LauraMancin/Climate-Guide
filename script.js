@@ -84,6 +84,7 @@ function buscarClima() {
             document.getElementById("umidade").textContent =
                 dados.main.humidity;
 
+            // Velocidade do vento
             const ventoKmH = dados.wind.speed * 3.6;
 
             document.getElementById("vento").textContent =

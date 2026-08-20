@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./images/weather-icon.png" type="image/x-icon">
-    <title>Climate Guide - v2</title>
+    <title>Climate Guide - v3</title>
 </head>
 <body>
     <main>
@@ -23,7 +23,6 @@
                 </div>
 
                 <button class="botaoBuscar" id="botaoBuscar">Buscar</button>
-                
             </div>
 
             <section class="resultado">
@@ -47,6 +46,21 @@
                     <p>
                         <img src="./images/dry.png">
                         Sensação térmica:
+                        <span id="sensacao">--</span> °C
+                    </p>
+                </div>
+
+                <!-- Temp. Máxima e Mínima -->
+                <div class="linha">
+                    <p>
+                        <img src="./images/thermometer.png">
+                        Temperatura Máxima:
+                        <span id="descricao">--</span> 
+                    </p>
+        
+                    <p>
+                        <img src="./images/thermometer.png">
+                        Temperatura Mínima:
                         <span id="sensacao">--</span> °C
                     </p>
                 </div>
@@ -106,11 +120,13 @@
                 </div>
             </section>
         </section>
-        
 
-        </canvas>
+        <!-- <div class="grafico">
+            <canvas id="graficoTemperatura"></canvas>
+        </div> -->
     </main>
 
+    <script src="./grafico.js"></script>
     <script src="./script.js"></script>
 
 </body>

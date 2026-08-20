@@ -20,7 +20,7 @@ body{
     background-image: url(../images/climate-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position:fixed;
+
 }
 
 .tituloPrincipal{
@@ -55,7 +55,7 @@ body{
     font-weight: 600;
     background-color: #9b9b9ba6;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     margin: 50px 50px 50px 50px;
 }
 
@@ -123,4 +123,18 @@ body{
     align-items: first baseline;
     line-height: 1.5;
     gap: 25px;
+}
+
+
+
+.grafico{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9b9b9ba6;
+    border-radius: 10px;
+    padding: 200px;
+    margin: 50px 50px 50px 50px;
 }
