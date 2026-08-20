@@ -125,15 +125,13 @@ body{
     gap: 25px;
 }
 
-
-
 .grafico{
     width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #9b9b9ba6;
+    background-color: #d6cbcba6;
     border-radius: 10px;
     padding: 200px;
     margin: 50px 50px 50px 50px;

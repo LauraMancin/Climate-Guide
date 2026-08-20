@@ -52,9 +52,16 @@ function buscarClima() {
 
             document.getElementById("temperatura").textContent =
                 dados.main.temp.toFixed(1);
+
+            document.getElementById("tempMax").textContent =
+                dados.main.temp_max.toFixed(1);
                 
+            document.getElementById("tempMin").textContent =
+                dados.main.temp_min.toFixed(1); 
+
                 let descricao = document.getElementById("descricao").textContent =
                 dados.weather[0].description;
+
                 
                 // mudança do fundo conforme o clima(descrição)
                 if(descricao === 'céu limpo' || descricao === 'nuvens dispersas'){
@@ -93,6 +100,7 @@ function buscarClima() {
             // Rajada de vento
             if (dados.wind.gust) {
                 const rajadaKmH = dados.wind.gust * 3.6;
+                
                 document.getElementById("rajada").textContent =
                     rajadaKmH.toFixed(1);
             } else {

@@ -55,13 +55,13 @@
                     <p>
                         <img src="./images/thermometer.png">
                         Temperatura Máxima:
-                        <span id="descricao">--</span> 
+                        <span id="tempMax">--</span> °C
                     </p>
         
                     <p>
                         <img src="./images/thermometer.png">
                         Temperatura Mínima:
-                        <span id="sensacao">--</span> °C
+                        <span id="tempMin">--</span> °C
                     </p>
                 </div>
 
@@ -121,11 +121,12 @@
             </section>
         </section>
 
-        <!-- <div class="grafico">
-            <canvas id="graficoTemperatura"></canvas>
-        </div> -->
     </main>
-
+    
+    <div class="grafico">
+        <canvas id="graficoTemperatura"></canvas>
+    </div>
+    
     <script src="./grafico.js"></script>
     <script src="./script.js"></script>
 
