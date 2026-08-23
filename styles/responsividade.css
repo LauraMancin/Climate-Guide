@@ -1,0 +1,105 @@
+/* ---------- NOTEBOOK ---------- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .selecao {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .grafico {
+        width: 90%;
+        max-width: 600px;
+        padding: 60px 30px;
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- TABLET---------- */
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .selecao {
+        width: 85%;
+        max-width: 600px;
+        margin: 30px 0;
+        padding: 25px;
+    }
+
+    .grafico {
+        width: 85%;
+        max-width: 600px;
+        padding: 40px 20px;
+        margin: 30px 0;
+    }
+
+    .tituloPrincipal h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/* ---------- CELULAR ---------- */
+@media (max-width: 600px) {
+    .selecao {
+        width: 92%;
+        padding: 18px;
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .escolha {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .selecao input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .selecao button {
+        width: 100%;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .temperatura {
+        font-size: 30px;
+    }
+
+    .tituloPrincipal h1 {
+        font-size: 22px;
+    }
+
+    .tituloPrincipal p {
+        font-size: 13px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .grafico {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    .grafico canvas {
+        max-width: 100%;
+    }
+}
