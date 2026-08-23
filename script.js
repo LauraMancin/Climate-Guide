@@ -1,3 +1,5 @@
+import { previsaoDias } from "./grafico.js";
+
 const botaoBuscar = document.getElementById("botaoBuscar");
 
 const body = document.body.style
@@ -44,6 +46,13 @@ function buscarClima() {
         })
 
         .then(function(dados) {
+
+            const lat = dados.coord.lat;
+            
+            const lon = dados.coord.lon;
+            
+            console.log(dados);
+            console.log(lat, lon)
 
             console.log(dados);
 
@@ -134,6 +143,8 @@ function buscarClima() {
                 document.getElementById("chuva").textContent =
                     "Sem previsão de chuva";
             }
+
+            previsaoDias(lat, lon, chaveApi)
 
             //api open-meteo para pegar a fase da lua
             const urlLua = `https://api.open-meteo.com/v1/forecast?latitude=-23.5475&longitude=-46.6361&daily=moon_phase&timezone=auto`;
