@@ -8,6 +8,14 @@ const selecao = document.querySelector('.selecao')
 
 botaoBuscar.addEventListener("click", buscarClima);
 
+// faz com que o usuário possa apertar enter para buscar o clima
+const inputCidade = document.getElementById("cidade");
+inputCidade.addEventListener("keypress", function(evento) {
+    if (evento.key === "Enter") {
+        buscarClima();
+    }
+});
+
 function faseLua(valor) {
     if (valor === 0 || valor === 1) return "Lua nova";
     if (valor < 0.25) return "Lua crescente";
