@@ -80,9 +80,9 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                         datasets: [{
                             label: 'Temperatura',
                             data: temperaturas,
-                            borderColor: '#1f1f21',
+                            borderColor: 'red',
                             borderWidth: 1,
-                            pointBorderWidth: 9,
+                            pointBorderWidth: 2,
                             pointBorderColor: cores,
                             backgroundColor: 'red'
                         }]
@@ -116,9 +116,9 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                         datasets: [{
                             label: 'Chuva',
                             data: chuvas,
-                            borderColor: '#1f1f21',
+                            borderColor: 'blue',
                             borderWidth: 1,
-                            pointBorderWidth: 9,
+                            pointBorderWidth: 2,
                             pointBorderColor: 'blue',
                             backgroundColor: 'blue'
                         }]
