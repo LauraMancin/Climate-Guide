@@ -70,7 +70,7 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                 const ctxTemperatura = document.getElementById('graficoTemperatura');
 
                 if (graficoTemperatura) {
-                    graficoTemperatura.destroy(); // remove o gráfico anterior
+                    graficoTemperatura.destroy();
                 }
 
                 graficoTemperatura = new Chart(ctxTemperatura, {
@@ -82,8 +82,8 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                             data: temperaturas,
                             borderColor: 'red',
                             borderWidth: 1,
-                            pointBorderWidth: 2,
-                            pointBorderColor: cores,
+                            pointBorderWidth: 1,
+                            pointBorderColor: 'red',
                             backgroundColor: 'red'
                         }]
                     },
@@ -106,7 +106,7 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                 const ctxChuva = document.getElementById('graficoChuva');
 
                 if (graficoChuva) {
-                    graficoChuva.destroy(); // remove o gráfico anterior
+                    graficoChuva.destroy(); 
                 }
 
                 graficoChuva = new Chart(ctxChuva, {
@@ -118,7 +118,7 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                             data: chuvas,
                             borderColor: 'blue',
                             borderWidth: 1,
-                            pointBorderWidth: 2,
+                            pointBorderWidth: 1,
                             pointBorderColor: 'blue',
                             backgroundColor: 'blue'
                         }]
