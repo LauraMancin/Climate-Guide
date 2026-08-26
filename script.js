@@ -1,3 +1,10 @@
+require('dotenv').config();
+
+
+const chaveApi = process.env.KEY_API;
+
+
+
 import { previsaoDias } from "./grafico.js";
 
 const botaoBuscar = document.getElementById("botaoBuscar");
@@ -35,9 +42,6 @@ function buscarClima() {
         alert("Digite o nome de uma cidade.");
         return;
     }
-
-
-    const chaveApi = "87a66878258138027af2a3fc1ad0fdf6";
 
     const url =
         `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${chaveApi}&units=metric&lang=pt_br`;
