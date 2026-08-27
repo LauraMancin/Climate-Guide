@@ -1,3 +1,10 @@
+require('dotenv').config();
+
+
+const chaveApi = process.env.KEY_API;
+
+
+
 import { previsaoDias } from "./grafico.js";
 
 const botaoBuscar = document.getElementById("botaoBuscar");
@@ -7,6 +14,14 @@ const body = document.body.style
 const selecao = document.querySelector('.selecao')
 
 botaoBuscar.addEventListener("click", buscarClima);
+
+// faz com que o usuário possa apertar enter para buscar o clima
+const inputCidade = document.getElementById("cidade");
+inputCidade.addEventListener("keypress", function(evento) {
+    if (evento.key === "Enter") {
+        buscarClima();
+    }
+});
 
 function faseLua(valor) {
     if (valor === 0 || valor === 1) return "Lua nova";
@@ -27,9 +42,6 @@ function buscarClima() {
         alert("Digite o nome de uma cidade.");
         return;
     }
-
-
-    const chaveApi = "87a66878258138027af2a3fc1ad0fdf6";
 
     const url =
         `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${chaveApi}&units=metric&lang=pt_br`;

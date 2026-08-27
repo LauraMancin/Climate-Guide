@@ -70,7 +70,7 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                 const ctxTemperatura = document.getElementById('graficoTemperatura');
 
                 if (graficoTemperatura) {
-                    graficoTemperatura.destroy(); // remove o gráfico anterior
+                    graficoTemperatura.destroy();
                 }
 
                 graficoTemperatura = new Chart(ctxTemperatura, {
@@ -80,10 +80,10 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                         datasets: [{
                             label: 'Temperatura',
                             data: temperaturas,
-                            borderColor: '#1f1f21',
+                            borderColor: 'red',
                             borderWidth: 1,
-                            pointBorderWidth: 9,
-                            pointBorderColor: cores,
+                            pointBorderWidth: 1,
+                            pointBorderColor: 'red',
                             backgroundColor: 'red'
                         }]
                     },
@@ -106,7 +106,7 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                 const ctxChuva = document.getElementById('graficoChuva');
 
                 if (graficoChuva) {
-                    graficoChuva.destroy(); // remove o gráfico anterior
+                    graficoChuva.destroy(); 
                 }
 
                 graficoChuva = new Chart(ctxChuva, {
@@ -116,10 +116,10 @@ export function previsaoDias(latitude, longitude, chaveApi) {
                         datasets: [{
                             label: 'Chuva',
                             data: chuvas,
-                            borderColor: '#1f1f21',
+                            borderColor: 'blue',
                             borderWidth: 1,
                             pointBorderWidth: 9,
-                            pointBorderColor: 'blue',
+                            pointBorderColor: cores,
                             backgroundColor: 'blue'
                         }]
                     },
